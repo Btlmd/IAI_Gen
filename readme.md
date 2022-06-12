@@ -17,6 +17,10 @@ TODO
 
 （如果条件比较苛刻可能反复生成十几次才能达到要求qwq
 
+### Example
+<img src="example/todo_1655050916.jpg" alt="before">
+<img src="example/done_1655050916.jpg" alt="after">
+
 ### 运行方法
 ```bash
 python tree.py
