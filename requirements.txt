@@ -1,6 +1,7 @@
 APScheduler==3.9.1
 attrdict==2.0.1
 backports.zoneinfo==0.2.1
+colorama==0.4.4
 igraph==0.9.11
 kaleido==0.2.1
 plotly==5.8.2
@@ -8,4 +9,5 @@ pytz-deprecation-shim==0.1.0.post0
 six==1.16.0
 tenacity==8.0.1
 texttable==1.6.4
+tqdm==4.64.0
 tzlocal==4.1
