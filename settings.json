@@ -1,8 +1,9 @@
 {
   "tree": {
-    "layers": 5,
-    "max_ch": 4,
-    "max_leaves": 40,
+    "layers": 6,
+    "max_ch": 3,
+    "max_leaves": 50,
+    "min_clip": 16,
     "debug": false,
     "show_clip_count": true,
     "distinguish_max_min": true,
