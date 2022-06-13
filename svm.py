@@ -4,6 +4,9 @@ import json
 from attrdict import AttrDict
 import time
 import random
+import pathlib
+import os
+from IPython import embed
 
 
 def dot(lhs: Array, rhs: Array):
@@ -99,9 +102,15 @@ if __name__ == "__main__":
         assert "svm" in settings
         settings = AttrDict(settings["svm"])
 
+    save_path = pathlib.Path('doc')
+    if not os.path.exists(save_path):
+        os.mkdir(save_path)
+    if save_path.is_file():
+        raise RuntimeError(f"{save_path} should be a directory")
+
     if settings.random:
         sd = int(time.time())
-        # sd = 1655124895
+        # sd = 1655127759
         print("Current random seed", sd)
         random.seed(sd)
         problem = Template("template/svm_problem.md", f"doc/svm_problem_{sd}.md")
@@ -265,6 +274,25 @@ if __name__ == "__main__":
         solution.commit()
 
     # print_latex(solutions)
+    # solutions = sorted(solutions)
+
+    def eq(s1, s2):
+        if s1[1] != s2[1]:
+            return False
+
+        for ik, iv in s1[0].items():
+            if s2[0][ik] != iv:
+                return False
+        return True
+
+    while True:
+        for ss1 in solutions:
+            for ss2 in solutions:
+                if eq(ss1, ss2):
+                    solutions.remove(ss1)
+                    continue
+        break
+
     var_choice, min_value = min_solutions(solutions)
 
     result = ""
