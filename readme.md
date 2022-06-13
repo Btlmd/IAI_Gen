@@ -1,9 +1,36 @@
 # IAI Gen
 复习得是不是有点烦躁？练习题太少？这里提供批量生成人智导练习题的工具
 
+
+首先配置环境
 ```bash
 pip install -r requirements.txt
 ```
+
+## SVM
+
+模仿 2021 年的期末考题，随机生成一道训练集大小为 3 的二元 SVM 问题及其逐步骤的详细解答。
+
+### Example
+
+见 `example/svm_*.md`。
+
+### 运行
+```bash
+python svm.py
+```
+
+### 配置说明
+
+题目和解答的模板见 `template/svm_problem.md` 和 `template/svm_solution.md`。
+
+```bash
+"range": 随机取样范围，将在 [-range, range] 中的整数中随机取样生成向量
+"kernels": 可供选择的核函数。"repr" 是函数运算时执行的代码，"str" 是LaTex格式的函数表达
+"random": 是否随机生成
+```
+
+
 
 ## A* 算法
 
@@ -21,7 +48,7 @@ TODO
 ![todo](example/todo_1655050916.jpg)
 ![done](example/done_1655050916.jpg)
 
-### 运行方法
+### 运行
 ```bash
 python tree.py
 ```
@@ -49,10 +76,6 @@ tree.py:93: RuntimeWarning: Couldn't reach some vertices at src/paths/unweighted
 ```
 
 ## 决策树
-
-TODO
-
-## SVM
 
 TODO
 

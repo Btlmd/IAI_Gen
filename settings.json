@@ -8,5 +8,19 @@
     "show_clip_count": true,
     "distinguish_max_min": true,
     "save_path": "img/"
+  },
+  "svm": {
+    "range": 4,
+    "kernels": [
+      {
+        "repr": "def kernel(lhs: Array, rhs: Array):\n    assert len(lhs) == len(rhs)\n    return (1 + dot(lhs, rhs)) ** 2",
+        "str": "(1+x^Ty)^2"
+      },
+      {
+        "repr": "def kernel(lhs: Array, rhs: Array):\n    assert len(lhs) == len(rhs)\n    return dot(lhs, rhs)",
+        "str": "x^Ty"
+      }
+    ],
+    "random": true
   }
 }
