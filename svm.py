@@ -109,8 +109,8 @@ if __name__ == "__main__":
         raise RuntimeError(f"{save_path} should be a directory")
 
     if settings.random:
-        # sd = int(time.time())
-        sd = 1655128848
+        sd = int(time.time())
+        # sd = 1655128848
         print("Current random seed", sd)
         random.seed(sd)
         problem = Template("template/svm_problem.md", f"doc/svm_problem_{sd}.md")
