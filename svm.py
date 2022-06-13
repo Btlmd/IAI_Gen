@@ -109,8 +109,8 @@ if __name__ == "__main__":
         raise RuntimeError(f"{save_path} should be a directory")
 
     if settings.random:
-        sd = int(time.time())
-        # sd = 1655127759
+        # sd = int(time.time())
+        sd = 1655128848
         print("Current random seed", sd)
         random.seed(sd)
         problem = Template("template/svm_problem.md", f"doc/svm_problem_{sd}.md")
@@ -285,13 +285,17 @@ if __name__ == "__main__":
                 return False
         return True
 
+    # embed()
+
     while True:
         for ss1 in solutions:
             for ss2 in solutions:
-                if eq(ss1, ss2):
+                if eq(ss1, ss2) and ss1 is not ss2:
                     solutions.remove(ss1)
                     continue
         break
+
+    # embed()
 
     var_choice, min_value = min_solutions(solutions)
 
