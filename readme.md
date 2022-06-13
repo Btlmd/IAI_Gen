@@ -32,6 +32,16 @@ python svm.py
 "random": 是否随机生成
 ```
 
+## 决策树
+
+困了，介绍略。生成的文件见 `doc/decision_tree_**.md`。二阶摆烂，解答和题目糊到一个文件里了。
+
+### 运行
+
+```bash
+python decision.py
+```
+
 
 
 ## A* 算法
@@ -76,10 +86,6 @@ tree.py:93: RuntimeWarning: Couldn't reach some vertices at src/paths/unweighted
 "distinguish_max_min": 图中是否区分极大极小节点
 "save_path": 生成图片保存路径
 ```
-
-## 决策树
-
-TODO
 
 ## 神经网络设计
 
