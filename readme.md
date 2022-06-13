@@ -11,6 +11,8 @@ pip install -r requirements.txt
 
 模仿 2021 年的期末考题，随机生成一道训练集大小为 3 的二元 SVM 问题及其逐步骤的详细解答。
 
+输出可以结合 Typora 进行阅读。
+
 ### Example
 
 见 `example/svm_*.md`。
