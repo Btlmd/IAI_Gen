@@ -21,6 +21,25 @@ pip install -r requirements.txt
 ```bash
 python svm.py
 ```
+**感谢 [鲁大师](https://github.com/lr-tsinghua11) 在 [PR#1](https://github.com/Btlmd/IAI_Gen/pull/1) 提供的题目筛选器。**
+
+> 筛选SVM生成的题目和答案，避免生成如下牛马答案（X）
+> 
+> ![图片](https://user-images.githubusercontent.com/91667725/173529111-6479af3f-f0de-4d75-8dc1-13a011f51290.png)
+> 
+> 运行步骤，首先使用脚本生成1000个答案（实在等不及了按 Ctrl + c 停止）
+> 
+> `./repeat`
+> 
+> 然后执行 filter.py 程序
+> 
+> `python filter.py`
+> 
+> 你将获得类似如下提示信息
+> 
+> `精选优质题库:  14 / 105 题，值得你拥有！`
+> 
+
 
 ### 配置说明
 
