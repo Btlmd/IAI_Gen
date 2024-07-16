@@ -28,6 +28,7 @@
     "trait_cnt": 4,
     "set_size": 15,
     "subclass_range": [2, 3],
-    "save_path": "img/"
+    "save_path": "img/",
+    "algo": "C4.5"
   }
 }

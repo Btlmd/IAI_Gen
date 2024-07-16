@@ -4,7 +4,8 @@
 
 首先配置环境
 ```bash
-pip install -r requirements.txt
+conda create --name <your_env_name> --file requirements.txt
+conda activate <your_env_name>
 ```
 
 ## SVM

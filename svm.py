@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
     if settings.random:
         sd = int(time.time())
-        # sd = 1655128848
+        # sd = 1718602437
         print("Current random seed", sd)
         random.seed(sd)
         problem = Template("template/svm_problem.md", f"doc/svm_problem_{sd}.md")
@@ -230,7 +230,7 @@ if __name__ == "__main__":
                df[1] / dc[1] - df[2] / dc[2],
                con]
     stagnation = solve(lag_eqs, var, dict=True)
-    R("lagrange_eqs", [latex(eq) + r"&=0 \\" for eq in lag_eqs])
+    R("lagrange_eqs", [latex(eq).replace('- ', '-') + r"&=0 \\" for eq in lag_eqs])
 
     solutions = []
 
@@ -257,7 +257,7 @@ if __name__ == "__main__":
         dpf = [pcon, pf.diff(left_var[0]) / pcon.diff(left_var[0]) - pf.diff(left_var[1]) / pcon.diff(left_var[1])]
 
         # print("dpf", dpf)
-        solution("grad_eqs", [latex(eq) + r"&=0 \\" for eq in dpf])
+        solution("grad_eqs", [latex(eq).replace('- ', '-') + r"&=0 \\" for eq in dpf])
         stagnation = solve(dpf, left_var)
 
         # print(stagnation)

@@ -145,8 +145,9 @@ while True:
                 points += [inf]
 
         G.vs["reward"] = points
+        G.vs["name"] = range(len(G.vs))
 
-        layout = G.layout('tree', root=0)
+        layout = G.layout('tree', root=[G.vs.find(name=0).index])
         Xpos = {k: layout[k][1] for k in range(n_vertices)}
         alpha_beta(G, 0, [], True)
         # print(len(clipped))

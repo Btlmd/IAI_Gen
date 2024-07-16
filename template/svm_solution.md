@@ -25,7 +25,7 @@ $$
 $$
 \nabla f=[df],\ \nabla \phi=[dphi]
 $$
-结合 $\phi=0$，得到方程租
+结合 $\phi=0$，得到方程组
 $$
 \begin{aligned}
 [lagrange_eqs]
